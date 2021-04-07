@@ -1,14 +1,11 @@
 // console.log('inside client side js');
 console.log('This cannot be used in the node js background. this is something only used in client side javascript');
 
-fetch('https://puzzle.mead.io/puzzle').then((response) =>{
-    response.json().then((data) =>{
-        console.log(data);
-    })
-})
-
-
-
+// fetch('https://puzzle.mead.io/puzzle').then((response) =>{
+//     response.json().then((data) =>{
+//         console.log(data);
+//     })
+// })
 
 
 const weatherForm = document.querySelector('form');
@@ -25,7 +22,7 @@ weatherForm.addEventListener('submit' , (e) => {
     msgOne.textContent = 'Loading......';
 
     console.log(location); 
-    fetch('http://localhost:3000/weather?address='+location).then((response) => {
+    fetch('/weather?address='+location).then((response) => {
         response.json().then((data) => {
             if(data.error){
                 // return console.log(data.error);
