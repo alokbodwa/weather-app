@@ -7,7 +7,7 @@ const weatherInfo = require('./utils/weatherInfo');
 
 
 const app = express();
-const port = 3000||process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Finding the path
 // console.log(__dirname);
@@ -117,7 +117,7 @@ app.get('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Server running at ${port}`);
+    console.log('Server running at ' + port);
 });
 
 
