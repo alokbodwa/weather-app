@@ -1,5 +1,5 @@
-console.log('inside client side js');
-console.log('This cannot be ised in the node js background. this is something only used in client side javascript');
+// console.log('inside client side js');
+console.log('This cannot be used in the node js background. this is something only used in client side javascript');
 
 fetch('https://puzzle.mead.io/puzzle').then((response) =>{
     response.json().then((data) =>{
